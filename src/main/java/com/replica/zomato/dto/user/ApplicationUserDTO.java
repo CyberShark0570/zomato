@@ -1,12 +1,10 @@
-package com.replica.zomato.entity.user;
+package com.replica.zomato.dto.user;
 
-import com.replica.zomato.entity.BaseEntity;
 import com.replica.zomato.enums.UserTypeEnum;
-import jakarta.persistence.*;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 
-@Entity
-@Table(name = "users", uniqueConstraints = {@UniqueConstraint(name = "UniqueUserType", columnNames = {"mobileNumber", "emailAddress", "userTypeEnum"})})
-public class ApplicationUser extends BaseEntity {
+public class ApplicationUserDTO {
     private String name;
     private String firstName;
     private String lastName;
@@ -14,10 +12,9 @@ public class ApplicationUser extends BaseEntity {
     private String emailAddress;
     private String mobileNumber;
     private String password;
-    @Enumerated(value = EnumType.ORDINAL)
-    private UserTypeEnum userTypeEnum;
+    private String userTypeEnum;
 
-    public ApplicationUser(String name, String firstName, String lastName, String emailAddress, String mobileNumber, String password, UserTypeEnum userTypeEnum) {
+    public ApplicationUserDTO(String name, String firstName, String lastName, String emailAddress, String mobileNumber, String password, String userTypeEnum) {
         this.name = name;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -75,11 +72,11 @@ public class ApplicationUser extends BaseEntity {
         this.password = password;
     }
 
-    public UserTypeEnum getUserTypeEnum() {
+    public String getUserTypeEnum() {
         return userTypeEnum;
     }
 
-    public void setUserTypeEnum(UserTypeEnum userTypeEnum) {
+    public void setUserTypeEnum(String userTypeEnum) {
         this.userTypeEnum = userTypeEnum;
     }
 }

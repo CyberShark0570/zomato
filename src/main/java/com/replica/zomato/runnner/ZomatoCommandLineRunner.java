@@ -1,7 +1,7 @@
 package com.replica.zomato.runnner;
 
-import com.replica.zomato.entity.user.Customer;
-import com.replica.zomato.entity.user.DeliveryAgent;
+import com.replica.zomato.entities.user.variants.Customer;
+import com.replica.zomato.entities.user.variants.DeliveryAgent;
 import com.replica.zomato.enums.UserTypeEnum;
 import com.replica.zomato.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

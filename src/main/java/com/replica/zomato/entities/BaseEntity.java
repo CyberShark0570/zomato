@@ -1,4 +1,4 @@
-package com.replica.zomato.entity;
+package com.replica.zomato.entities;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

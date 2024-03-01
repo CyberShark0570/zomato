@@ -1,5 +1,6 @@
-package com.replica.zomato.entity.user;
+package com.replica.zomato.entities.user.variants;
 
+import com.replica.zomato.entities.user.ApplicationUser;
 import com.replica.zomato.enums.UserTypeEnum;
 import jakarta.persistence.Entity;
 
